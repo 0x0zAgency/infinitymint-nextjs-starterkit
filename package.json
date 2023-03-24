@@ -1,20 +1,35 @@
 {
-  "name": "nextjs-template",
+  "name": "infinitymint-nextjs-template",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "console": "infinitymint -- --console",
+    "lint": "next lint",
+    "doc": "typedoc --options ./typedoc.json"
+  },
+  "_moduleAliases": {
+    "@app": "./node_modules/infinitymint/dist/app/",
+    "@client": "./node_modules/infinitymint-client/dist/src/"
+  },
+  "infinityMint": {
+    "allowExport": true
   },
   "dependencies": {
     "@types/node": "18.15.6",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
+    "infinitymint": "^1.5.1",
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "5.0.2"
-  }
+  },
+  "devDependencies": {
+    "module-alias": "^2.2.2",
+    "typedoc": "^023.28"
+  },
+  "packageManager": "yarn@3.5.0"
 }
